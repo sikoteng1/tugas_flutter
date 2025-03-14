@@ -43,11 +43,11 @@ void addTicket() {
   TextEditingController nameController = TextEditingController();
   TextEditingController categoryController = TextEditingController();
   TextEditingController priceController = TextEditingController();
-  String selectedCategory = 'Nusantara'; // Default category
+  String selectedCategory = 'Nusantara'; 
 
   showDialog(
     context: context,
-    barrierDismissible: false, // Membuat background gelap & tidak bisa ditutup dengan klik luar
+    barrierDismissible: false, 
     builder: (context) {
       return AlertDialog(
         title: Text('Tambah Ticket'),
@@ -125,10 +125,6 @@ void addTicket() {
                 controller: nameController,
                 decoration: InputDecoration(labelText: 'Nama Ticket'),
               ),
-              // TextField(
-              //   controller: categoryController,
-              //   decoration: InputDecoration(labelText: 'Kategori'),
-              // ),
               DropdownButtonFormField<String>(
               value: selectedCategory,
               items: ['Nusantara', 'Mancanegara']
